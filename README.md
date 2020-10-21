@@ -1,4 +1,4 @@
-# impactgeniuswebapp
+# imprgeniuswebapp
 A client dashboard web app for Impact Genius' customers
 
 Members:
