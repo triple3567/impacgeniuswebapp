@@ -5,6 +5,7 @@
 }
 
 .Login-header{
+    text-align: center;
     position: absolute;
     background-color: #ffffff;
     justify-content: center;
@@ -24,4 +25,6 @@
     right: 30%;
     bottom: 20%;
     border: medium solid black;
+    justify-items: center;
+    text-align: center;
 }

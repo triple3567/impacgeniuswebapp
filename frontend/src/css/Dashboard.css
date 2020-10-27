@@ -1,0 +1,68 @@
+.Dashboard{
+    position: relative;
+    background-color: #4273fb;
+    height: 100vh;
+    width: 100vw;
+}
+
+.Dashboard-header{
+    position: fixed;
+    background-color: #5b82ef;
+    border-bottom: medium solid black;
+    height: 10%;
+    width: 100%;
+}
+
+.Dashboard-title{
+    position: absolute;
+    font-size: large;
+    font-weight: 800;
+    width: fit-content;
+    height: 50%;
+    text-align: left;
+}
+
+.Dashboard-main{
+    position: absolute;
+    top: 15%;
+}
+
+.Dashboard-module1{
+    position: absolute;
+    border: medium solid black;
+    left: 3%;
+    height: 35vh;
+    width: 40vw;
+    top: 15%;
+    text-align: center;
+}
+
+.Dashboard-module2{
+    position: absolute;
+    border: medium solid black;
+    right: 3%;
+    height: 35vh;
+    width: 40vw;
+    top: 15%;
+    text-align: center;
+}
+
+.Dashboard-module3{
+    position: absolute;
+    border: medium solid black;
+    left: 3%;
+    height: 35vh;
+    width: 40vw;
+    bottom: 10%;
+    text-align: center;
+}
+
+.Dashboard-module4{
+    position: absolute;
+    border: medium solid black;
+    right: 3%;
+    height: 35vh;
+    width: 40vw;
+    bottom: 10%;
+    text-align: center;
+}
