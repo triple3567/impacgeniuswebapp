@@ -1,23 +1,32 @@
 import React from "react"
 import '../css/Login.css'
+import {Input, Button} from 'antd'
 
 const LoginBox = (props) => {
     return(
         <div className='Login-box'>
-            <div class='column'>
+            <div class='column' style={{width: "50%", margin:"auto"}}>
                 <div class='row' style={{paddingTop: "15%"}}>
                     Username
                 </div>
-                <input class='row' placeholder='johnapples@gmail.com'></input>
-                <div class='row'>
+                <Input size='medium' placeholder="Username..."></Input>
+                <div class='row' style={{paddingTop: "5%"}}>
                     Password
                 </div>
-                <input class='row' placeholder='--------'></input>
-                <div class='row'>
-                    <button class='row'>
-                    Log In
-                    </button>
+                <Input size='medium' type='password' placeholder='Password...'></Input>
+                
+                <div style={{paddingTop: "10%"}} class='row' className="Center-text">
+                     <Button type='dashed' class='row' >
+                     Log In
+                     </Button>                   
                 </div>
+
+                <div style={{paddingTop: "5%"}} class='row' className="Center-text">
+                <Button type='dashed' class='row' >
+                     Sign in with Google
+                </Button>
+                </div>
+
             </div>
         </div>
     )
