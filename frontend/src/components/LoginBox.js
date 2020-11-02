@@ -16,13 +16,13 @@ const LoginBox = (props) => {
                 <Input size='medium' type='password' placeholder='Password...'></Input>
                 
                 <div style={{paddingTop: "10%"}} class='row' className="Center-text">
-                     <Button type='dashed' class='row' >
+                     <Button type='primary' class='row' >
                      Log In
                      </Button>                   
                 </div>
 
                 <div style={{paddingTop: "5%"}} class='row' className="Center-text">
-                <Button type='dashed' class='row' >
+                <Button type='primary' class='row' >
                      Sign in with Google
                 </Button>
                 </div>
