@@ -1,12 +1,13 @@
 import React from 'react';
 import '../css/Login.css'
 import LoginBox from '../components/LoginBox.js'
+import Logo from '../res/imprint_genius_logo.png'
 
 function Login(){
     return(
         <div className='Login'>
             <header className='Login-header'>
-                Imprint Genius
+                <img src={Logo} width="500"/>
             </header>    
             <LoginBox/>
         </div>
