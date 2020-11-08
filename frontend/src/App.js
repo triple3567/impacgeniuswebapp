@@ -3,7 +3,12 @@ import './App.css';
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 
+<<<<<<< Updated upstream
 function App() {
+=======
+
+const App = () => {
+>>>>>>> Stashed changes
   return (
     
     /*
@@ -21,3 +26,4 @@ function App() {
 }
 
 export default App;
+ 
