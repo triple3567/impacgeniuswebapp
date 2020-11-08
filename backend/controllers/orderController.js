@@ -1,7 +1,9 @@
 "use-strict";
 import order from "../models/orderModel.js";
+import getSampleData from "../sample.js";
 
 export const getAllOrders = async (req, res) => {
+  /*
   await order.find({}, (err, data) => {
     if (err)
       return res.status(200).send({
@@ -9,4 +11,9 @@ export const getAllOrders = async (req, res) => {
       });
     res.json(data);
   });
+  */
+  // temporary just to send the sample data for now
+
+  const data = getSampleData();
+  res.json(data);
 };
