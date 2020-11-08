@@ -1,0 +1,56 @@
+[
+  {
+    "order_number": 1234,
+    "product_name": "sweaters",
+    "count": 20,
+    "date": "09/10/2020",
+    "product_type": "merchandise",
+    "cost": 4000,
+    "customer_name": "Tuco Salamanca"
+  },
+  {
+    "order_number": 4321,
+    "product_name": "hoodies",
+    "count": 10,
+    "date": "08/10/2020",
+    "product_type": "merchandise",
+    "cost": 2000,
+    "customer_name": "Abraham Garcia"
+  },
+  {
+    "order_number": 2223,
+    "product_name": "glasses",
+    "count": 50,
+    "date": "10/10/2020",
+    "product_type": "merchandise",
+    "cost": 3000,
+    "customer_name": "Walter White"
+  },
+  {
+    "order_number": 1235,
+    "product_name": "mugs",
+    "count": 20,
+    "date": "09/10/2020",
+    "product_type": "merchandise",
+    "cost": 4000,
+    "customer_name": "Tuco Salamanca"
+  },
+  {
+    "order_number": 4329,
+    "product_name": "hats",
+    "count": 10,
+    "date": "08/10/2020",
+    "product_type": "merchandise",
+    "cost": 2000,
+    "customer_name": "Abraham Garcia"
+  },
+  {
+    "order_number": 2123,
+    "product_name": "pillows",
+    "count": 50,
+    "date": "10/10/2020",
+    "product_type": "merchandise",
+    "cost": 3000,
+    "customer_name": "Walter White"
+  }
+]
