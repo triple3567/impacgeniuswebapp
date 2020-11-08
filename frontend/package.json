@@ -10,16 +10,9 @@
     "firebase": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
     "react-firebase-hooks": "^2.2.0",
     "react-firebaseui": "^4.1.0",
     "react-router-dom": "^5.2.0",
->>>>>>> Stashed changes
-=======
-    "react-router-dom": "^5.2.0",
->>>>>>> 6a543a9d858b85d459565b99087a2463f3c909b1
     "react-scripts": "^4.0.0"
   },
   "scripts": {
