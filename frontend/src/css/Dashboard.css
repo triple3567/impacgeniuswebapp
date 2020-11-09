@@ -29,7 +29,7 @@
 
 .Dashboard-module1{
     position: absolute;
-    border: medium solid black;
+    border: none;
     left: 3%;
     height: 35vh;
     width: 40vw;
@@ -39,7 +39,7 @@
 
 .Dashboard-module2{
     position: absolute;
-    border: medium solid black;
+    border: none;
     right: 3%;
     height: 35vh;
     width: 40vw;
@@ -49,7 +49,7 @@
 
 .Dashboard-module3{
     position: absolute;
-    border: medium solid black;
+    border: none;
     left: 3%;
     height: 35vh;
     width: 40vw;
@@ -59,7 +59,7 @@
 
 .Dashboard-module4{
     position: absolute;
-    border: medium solid black;
+    border: none;
     right: 3%;
     height: 35vh;
     width: 40vw;
