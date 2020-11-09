@@ -1,6 +1,6 @@
 @import '~antd/dist/antd.css';
 
-.table{
+.carousel{
     position: absolute;
     width: 35vw;
 }

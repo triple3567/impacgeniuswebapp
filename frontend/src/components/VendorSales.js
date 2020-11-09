@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Pie} from 'react-chartjs-2';
+import "../css/VendorSales.css"
 
 class VendorChart extends Component{
     constructor(props){
@@ -25,7 +26,7 @@ class VendorChart extends Component{
                 data ={this.state.chartData}
                 options={{
                     legend:{
-                        position: "right",
+                        position: "bottom",
                         labels: {
                             fontColor: "white"
                         }

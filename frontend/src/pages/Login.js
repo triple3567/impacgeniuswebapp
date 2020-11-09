@@ -7,7 +7,7 @@ function Login(){
     return(
         <div className='Login'>
             <header className='Login-header'>
-                <img src={Logo} width="500"/>
+                <img src={Logo} width="75%"/>
             </header>    
             <LoginBox/>
         </div>
