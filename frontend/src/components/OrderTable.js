@@ -72,7 +72,7 @@ const columns = [
 
 const OrderTable = (props) => {
     return(
-        <div>
+        <div className="table">
             <Table 
             dataSource={testDataSource} 
             columns={columns}

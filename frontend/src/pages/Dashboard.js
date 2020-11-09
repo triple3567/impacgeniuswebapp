@@ -11,30 +11,26 @@ const { Header, Content, Footer } = Layout;
 function Dashboard() {
   return (
     <div className="Dashboard">
-      <Layout>
-        <Header className="fixed-header">
-          <img src={Logo} width="300"></img>
-        </Header>
-        <Content>
-          <div className="Dashboard-module1">
-            SALES BY PRODUCT
-            <ProductChart />
+          <div className="Dashboard-header">
+            <img src={Logo} width="300%" className="Dashboard-logo"></img>
           </div>
-
-          <div className="Dashboard-module2">
-            SALES BY VENDOR
-            <VendorChart />
+          <div classNane="Dashboard-main">
+            <div className="Dashboard-module1">
+              <ProductChart />
+            </div>
+  
+            <div className="Dashboard-module2">
+              <VendorChart />
+            </div>
+  
+            <div className="Dashboard-module3">
+              <OrderTable />
+            </div>
+  
+            <div className="Dashboard-module4">
+              <StatisticsCarousel />
+            </div>
           </div>
-
-          <div className="Dashboard-module3">
-            <OrderTable />
-          </div>
-
-          <div className="Dashboard-module4">
-            <StatisticsCarousel />
-          </div>
-        </Content>
-      </Layout>
     </div>
   );
 }
