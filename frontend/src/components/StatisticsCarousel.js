@@ -1,5 +1,6 @@
 import React from "react"
 import {Carousel} from 'antd'
+import "../css/StatisticsCarousel.css"
 
 const contentStyle = {
     height: '259px',
@@ -11,17 +12,19 @@ const contentStyle = {
 
 const StatisticsCarousel = (props) => {
     return(
-        <Carousel autoplay>
-            <div>
-                <h1 style={contentStyle}>Average Order: $56.24</h1>
-            </div>
-            <div>
-                <h1 style={contentStyle}>Total Sales: $23451.52</h1>
-            </div>
-            <div>
-                <h1 style={contentStyle}>Orders In Progress: 7</h1>
-            </div>
-        </Carousel>
+        <div className="carousel">
+            <Carousel autoplay>
+                <div>
+                    <h1 style={contentStyle}>Average Order: $56.24</h1>
+                </div>
+                <div>
+                    <h1 style={contentStyle}>Total Sales: $23451.52</h1>
+                </div>
+                <div>
+                    <h1 style={contentStyle}>Orders In Progress: 7</h1>
+                </div>
+            </Carousel>
+        </div>
     );
 }
 

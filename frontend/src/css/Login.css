@@ -1,7 +1,8 @@
 @import '~antd/dist/antd.css';
 .Login{
+    position: fixed;
     background-color: #4383c6;
-    height: 100vh;
+    height: 1080px;
     width: 100vw;
 }
 
@@ -10,25 +11,25 @@
     position: absolute;
     background-color: #406dec;
     justify-content: center;
-    top: 10%;
+    top: 5%;
     right: 30%;
     left: 30%;
-    font-size: 8vh;
-    font-weight: 900;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: medium solid black;
 }
 
 .Login-box{
     position: absolute;
     background-color: #406dec;
-    top: 30%;
+    top: 20%;
     left: 30%;
     right: 30%;
-    bottom: 20%;
+    bottom: 40%;
     border: medium solid black;
     justify-items: center;
     text-align: left;
-    font-size: large;
+    font-size: 1em;
 }
 
 .Center-text{

@@ -22,7 +22,7 @@ const LoginBox = (props) => {
                 </div>
 
                 <div style={{paddingTop: "5%"}} class='row' className="Center-text">
-                <Button type='primary' class='row' >
+                <Button type='primary' class='row'>
                      Sign in with Google
                 </Button>
                 </div>
