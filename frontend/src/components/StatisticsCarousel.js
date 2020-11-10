@@ -15,13 +15,13 @@ const StatisticsCarousel = (props) => {
         <div className="carousel">
             <Carousel autoplay>
                 <div>
-                    <h1 style={contentStyle}>Average Order: $56.24</h1>
+                    <h1 style={contentStyle}>Average Order: $3000</h1>
                 </div>
                 <div>
-                    <h1 style={contentStyle}>Total Sales: $23451.52</h1>
+                    <h1 style={contentStyle}>Total Sales: $18000</h1>
                 </div>
                 <div>
-                    <h1 style={contentStyle}>Orders In Progress: 7</h1>
+                    <h1 style={contentStyle}>Orders In Progress: 6</h1>
                 </div>
             </Carousel>
         </div>

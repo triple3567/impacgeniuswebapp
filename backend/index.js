@@ -4,9 +4,12 @@ import config from "./config.js";
 import bodyParser from "body-parser";
 import orderRouter from "./routes/orderRouter.js";
 import connectToDatabase from "./connectMongodb.js";
+import cors from 'cors';
 
 //make the express app
 const app = express();
+
+app.use(cors());
 
 //body parsing middleware
 app.use(

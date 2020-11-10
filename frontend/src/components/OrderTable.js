@@ -1,6 +1,10 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import '../css/OrderTable.css'
 import {Table} from 'antd'
+
+const axios = require('axios').default;
+
+/*
 
 const testDataSource = [
     {
@@ -46,8 +50,8 @@ const testDataSource = [
         status: 'Delivered'
     },
 ];
-  
-const columns = [
+
+const testColumns = [
   {
       title: 'Order ID',
       dataIndex: 'orderID',
@@ -70,12 +74,71 @@ const columns = [
   }
 ];
 
+*/
+
+const realColumns = [
+    {
+        title: 'ID',
+        dataIndex: 'id',
+        key: 'id'
+    },
+    {
+        title: 'Order Number',
+        dataIndex: 'order_number',
+        key: 'order_number'
+    },
+    {
+        title: 'Product Name',
+        dataIndex: 'product_name',
+        key: 'product_name'
+    },
+    {
+        title: 'Count',
+        dataIndex: 'count',
+        key: 'count'
+    },
+    {
+        title: 'Date',
+        dataIndex: 'date',
+        key: 'date'
+    },
+    {
+        title: 'Product Type',
+        dataIndex: 'product_type',
+        key: 'product_type'
+    },
+    {
+        title: 'Cost',
+        dataIndex: 'cost',
+        key: 'cost'
+    },
+    {
+        title: 'Customer Name',
+        dataIndex: 'customer_name',
+        key: 'customer_name'
+    }
+]
 const OrderTable = (props) => {
+
+    const [realDataSource, setRealDataSource] = useState([])
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await axios(
+                'http://localhost:5000/api'
+            );
+    
+            setRealDataSource(result.data);
+        }
+
+        fetchData();
+    }, []);
+
     return(
         <div className="table">
             <Table 
-            dataSource={testDataSource} 
-            columns={columns}
+            dataSource={realDataSource}
+            columns={realColumns}
             size='small'
             scroll={{ y: 220 }}
             pagination={false}
