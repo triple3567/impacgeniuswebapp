@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import LoginBox from "./components/LoginBox";
 
 
 
@@ -17,5 +18,6 @@ const App = () => {
   );
 };
 
-export default App;
+export default  App;
+
  

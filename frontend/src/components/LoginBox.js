@@ -1,7 +1,7 @@
 import React from "react"
 import '../css/Login.css'
 import { Form, Input, Button, Checkbox } from 'antd'
-import { withRouter } from "react-router-dom";
+import { BrowserRouter, withRouter } from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
@@ -32,6 +32,7 @@ callbacks: {
 }
 };
 
+// for styling the username and password boxes
 const layout = {
     labelCol: {
       span: 8,
@@ -47,22 +48,32 @@ const layout = {
     },
   };
 
+
+
 const LoginBox = (props) => {
+    const [user] = useAuthState(auth);
     const onFinish = (values) => {
         console.log('Success:', values);
         console.log(values.username);
-        onSubmit();
+        // firebase.auth().createUserWithEmailAndPassword(values.username, values.password).catch(function(error) {
+        //   // Handle Errors here.
+        //   var errorCode = error.code;
+        //   var errorMessage = error.message;
+        //   console.log(errorCode);
+        //   console.log(errorMessage);
+        //   // ...
+        // });
+        console.log('email sign in ok');
+        console.log(user);
+        if(user){
+          window.location.href='http://localhost:3000/dashboard';
+        }
       };
     
       const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
       };
       
-      const onSubmit = withRouter(({ history }) => {
-        console.log('shouldve chaged');
-        history.push('/dashboard');
-      })
-
     return(
         <div className='Login-box'>
             <div class='column' style={{width: "50%", margin:"auto"}}>
@@ -106,7 +117,7 @@ const LoginBox = (props) => {
                     </Form.Item>
 
                     <Form.Item {...tailLayout}>
-                        <Button type="primary" htmlType="submit" onSubmit={onSubmit}> 
+                        <Button type="primary" htmlType="submit" > 
                         Submit
                         </Button >
                     </Form.Item>
@@ -121,6 +132,7 @@ const LoginBox = (props) => {
 
             </div>
         </div>
+
     )
 }
 export default LoginBox;
