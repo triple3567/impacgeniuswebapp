@@ -16,6 +16,26 @@ class VendorChart extends Component{
                         hoverBackgroundColor: ["LightSalmon","Khaki","LightGreen","LightSkyBlue","Orchid"]
                     }
                 ]
+            },
+            optionData: {
+                responsive:true,
+                title: {
+                    display: true,
+                    text: 'Vendor Sales',
+                    fontColor: "white",
+                    fontSize: 15,
+                },
+                legend:{
+                    position: "right",
+                    labels:{
+                        fontColor: "white"
+                    }
+                },
+                elements: {
+                    arc: {
+                        borderWidth: 0
+                    }
+                }
             }
         }
     }
@@ -24,19 +44,7 @@ class VendorChart extends Component{
             <div className="chart">
                 <Pie
                 data ={this.state.chartData}
-                options={{
-                    legend:{
-                        position: "bottom",
-                        labels: {
-                            fontColor: "white"
-                        }
-                    },
-                    elements: {
-                        arc: {
-                            borderWidth : 0
-                        }
-                    }
-                }}
+                options={this.state.optionData}
                 />
             </div>
         )

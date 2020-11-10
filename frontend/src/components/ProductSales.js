@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Pie} from 'react-chartjs-2';
-import "../css/ProductSales.css"
 
 class ProductChart extends Component{
     constructor(props){
@@ -16,6 +15,26 @@ class ProductChart extends Component{
                         hoverBackgroundColor: ["LightSalmon","Khaki","LightGreen","LightSkyBlue","Orchid"]
                     }
                 ]
+            },
+            optionData: {
+                responsive:true,
+                title: {
+                    display: true,
+                    text: 'Product Sales',
+                    fontColor: "white",
+                    fontSize: 15,
+                },
+                legend:{
+                    position: "right",
+                    labels:{
+                        fontColor: "white"
+                    }
+                },
+                elements: {
+                    arc: {
+                        borderWidth: 0
+                    }
+                }
             }
         }
     }
@@ -24,19 +43,7 @@ class ProductChart extends Component{
             <div className="chart">
                 <Pie
                 data ={this.state.chartData}
-                options={{
-                    legend:{
-                        position: "bottom",
-                        labels: {
-                            fontColor: "white"
-                        }
-                    },
-                    elements: {
-                        arc: {
-                            borderWidth : 0
-                        }
-                    }
-                }}
+                options={this.state.optionData}
                 />
             </div>
         )
