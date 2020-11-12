@@ -1,7 +1,7 @@
 import React from "react"
 import '../css/Login.css'
 import { Form, Input, Button, Checkbox } from 'antd'
-import { BrowserRouter, withRouter } from "react-router-dom";
+import { Redirect} from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
@@ -52,22 +52,23 @@ const layout = {
 
 const LoginBox = (props) => {
     const [user] = useAuthState(auth);
+    console.log( 'User Status: ' + user);
     const onFinish = (values) => {
         console.log('Success:', values);
         console.log(values.username);
-        // firebase.auth().createUserWithEmailAndPassword(values.username, values.password).catch(function(error) {
-        //   // Handle Errors here.
-        //   var errorCode = error.code;
-        //   var errorMessage = error.message;
-        //   console.log(errorCode);
-        //   console.log(errorMessage);
-        //   // ...
-        // });
+        firebase.auth().createUserWithEmailAndPassword(values.username, values.password).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          console.log(errorCode);
+          console.log(errorMessage);
+          // ...
+        });
         console.log('email sign in ok');
-        console.log(user);
-        if(user){
-          window.location.href='http://localhost:3000/dashboard';
-        }
+       
+        if(user != null){
+           window.location.href = "http://localhost:3000/dashboard"    
+          }
       };
     
       const onFinishFailed = (errorInfo) => {
@@ -124,7 +125,7 @@ const LoginBox = (props) => {
                 </Form>
 
                 <div style={{paddingTop: "5%"}} class='row' className="Center-text">
-                <StyledFirebaseAuth  className ="googlebutton"
+                <StyledFirebaseAuth  className ="googlebutton" 
                     uiConfig={uiConfig} 
                     firebaseAuth={auth}
                 />
