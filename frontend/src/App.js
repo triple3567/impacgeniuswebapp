@@ -10,11 +10,13 @@ import LoginBox from "./components/LoginBox";
 const App = () => {
   return (
     // switch determines which component to return based on the path
-    <Switch>
-      <Route exact path="/" component={Login}></Route>
-      <Route exact path="/login" component={Login}></Route>
-      <Route exact path="/dashboard" component={Dashboard}></Route>
-    </Switch>
+    <div>
+     <Switch>
+       <Route exact path="/" component={Login}></Route>
+       <Route exact path="/login" component={Login}></Route>
+       <Route exact path="/dashboard" component={Dashboard}></Route>
+     </Switch>
+    </div>
   );
 };
 
