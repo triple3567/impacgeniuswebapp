@@ -1,7 +1,7 @@
 .Dashboard {
   position: fixed;
-  background-color: #4273fb;
-  height: 1080px;
+  background-image: url(../res/background.jpg);
+  height: 100vh;
   width: 100vw;
 }
 
@@ -16,8 +16,9 @@
 .Dashboard-logo {
   display: block;
   margin-left: auto;
+  margin-top: 1%;
   margin-right: auto;
-  width: 50%;
+  width: 25%;
 }
 
 .Dashboard-title {
@@ -38,7 +39,7 @@
   position: absolute;
   border: none;
   top: 15%;
-  left: 15%;
+  left: 5%;
   text-align: center;
   justify-content: center;
 }
@@ -46,7 +47,7 @@
 .Dashboard-module2 {
   position: absolute;
   border: none;
-  right: 40%;
+  right: 60%;
   top: 15%;
   text-align: center;
   justify-content: center;
@@ -55,15 +56,16 @@
 .Dashboard-module3 {
   position: absolute;
   border: small solid black;
-  left: 10%;
-  top: 40%;
+  left: 5%;
+  top: 50%;
   text-align: center;
 }
 
 .Dashboard-module4 {
   position: absolute;
   border: none;
-  right: 45%;
-  top: 40%;
+  bottom: 0%;
+  margin-bottom: 15vh;
+  right: 100%;
   text-align: center;
 }

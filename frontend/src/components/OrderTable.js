@@ -4,103 +4,39 @@ import {Table} from 'antd'
 
 const axios = require('axios').default;
 
-/*
-
-const testDataSource = [
-    {
-        orderID: '1',
-        customer: 'Mike Wazowski',
-        grossSales: '5130',
-        status: 'Delivered'
-    },
-    {
-        orderID: '2',
-        customer: 'Patrick O\'Shea ',
-        grossSales: '333',
-        status: 'Lost'
-    },
-    {
-        orderID: '3',
-        customer: 'Jessica Jones',
-        grossSales: '23535',
-        status: 'Shipped'
-    },
-    {
-        orderID: '4',
-        customer: 'Toby McDonald',
-        grossSales: '14343',
-        status: 'Shipped'
-    },
-    {
-        orderID: '5',
-        customer: 'Larry Bird',
-        grossSales: '34233',
-        status: 'Delivered'
-    },
-    {
-        orderID: '6',
-        customer: 'Ronald Reagan ',
-        grossSales: '696969',
-        status: 'Not Shipped'
-    },
-    {
-        orderID: '7',
-        customer: 'Thomas Tank',
-        grossSales: '153',
-        status: 'Delivered'
-    },
-];
-
-const testColumns = [
-  {
-      title: 'Order ID',
-      dataIndex: 'orderID',
-      key: 'orderID'  
-  },
-  {
-      title: 'Customer',
-      dataIndex: 'customer',
-      key: 'customer'
-  },
-  {
-    title: 'Gross Sales',
-    dataIndex: 'grossSales',
-    key: 'grossSales'
-  },
-  {
-    title: 'Status',
-    dataIndex: 'status',
-    key: 'status'
-  }
-];
-
-*/
-
 const realColumns = [
     {
         title: 'ID',
         dataIndex: 'id',
-        key: 'id'
+        key: 'id',
+        width: '10%',
+        sorter: (a,b) => a.id - b.id,
+        defaultSortOrder: 'descend'
     },
     {
         title: 'Order Number',
         dataIndex: 'order_number',
-        key: 'order_number'
+        key: 'order_number',
+        width: '10%',
+        sorter: (a,b) => a.order_number - b.order_number,
     },
     {
         title: 'Product Name',
         dataIndex: 'product_name',
-        key: 'product_name'
+        key: 'product_name',
+        width: '15%',
     },
     {
         title: 'Count',
         dataIndex: 'count',
-        key: 'count'
+        key: 'count',
+        width: '7%',
     },
     {
         title: 'Date',
         dataIndex: 'date',
-        key: 'date'
+        key: 'date',
+        width: '20%',
     },
     {
         title: 'Product Type',
@@ -110,7 +46,8 @@ const realColumns = [
     {
         title: 'Cost',
         dataIndex: 'cost',
-        key: 'cost'
+        key: 'cost',
+        sorter: (a,b) => a.order_number - b.order_number,
     },
     {
         title: 'Customer Name',
@@ -140,7 +77,7 @@ const OrderTable = (props) => {
             dataSource={realDataSource}
             columns={realColumns}
             size='small'
-            scroll={{ y: 220 }}
+            scroll={{ y: 400 }}
             pagination={false}
             />
         </div>

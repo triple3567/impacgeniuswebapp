@@ -10,7 +10,7 @@ function Dashboard() {
   return (
     <div className="Dashboard">
           <div className="Dashboard-header">
-            <img src={Logo} width="300%" className="Dashboard-logo"></img>
+            <img src={Logo} width="10vw" className="Dashboard-logo"></img>
           </div>
           <div>
             <div className="Dashboard-module1">
@@ -18,11 +18,11 @@ function Dashboard() {
             </div>
   
             <div className="Dashboard-module2">
-              <VendorChart />
+              <OrderTable />
             </div>
   
-            <div className="Dashboard-module3">
-              <OrderTable />
+            <div className="Dashboard-module3">              
+              <VendorChart />
             </div>
   
             <div className="Dashboard-module4">

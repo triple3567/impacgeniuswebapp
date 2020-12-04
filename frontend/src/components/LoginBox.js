@@ -77,7 +77,7 @@ const LoginBox = (props) => {
       
     return(
         <div className='Login-box'>
-            <div class='column' style={{width: "50%", margin:"auto"}}>
+            <div class='column' style={{width: "50%", margin:"auto", marginTop:"5%"}}>
                 <Form
                     {...layout}
                     name="basic"

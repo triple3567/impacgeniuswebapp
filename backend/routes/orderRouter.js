@@ -6,4 +6,9 @@ const orderRouter = express.Router();
 
 orderRouter.get("/", orderController.getAllOrders);
 
+orderRouter.get("/average/", orderController.getAveragePrice);
+
+orderRouter.get("/total/", orderController.getTotalSales);
+
+orderRouter.get("/numSales/", orderController.getNumOrders);
 export default orderRouter;
