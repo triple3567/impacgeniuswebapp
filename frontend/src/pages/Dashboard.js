@@ -6,6 +6,7 @@ import StatisticsCarousel from "../components/StatisticsCarousel.js";
 import { Layout } from "antd";
 import ProductChart from "../components/ProductSales";
 import VendorChart from "../components/VendorSales";
+import SignOutButton from '../components/SignOutButton'
 const { Header, Content, Footer } = Layout;
 
 function Dashboard() {
@@ -13,6 +14,9 @@ function Dashboard() {
     <div className="Dashboard">
           <div className="Dashboard-header">
             <img src={Logo} width="300%" className="Dashboard-logo"></img>
+            <div className="Sign-out-button"> 
+              <SignOutButton/>
+            </div>
           </div>
           <div classNane="Dashboard-main">
             <div className="Dashboard-module1">
