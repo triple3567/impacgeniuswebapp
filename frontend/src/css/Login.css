@@ -1,7 +1,7 @@
 @import '~antd/dist/antd.css';
 .Login{
     position: fixed;
-    background-color: #4383c6;
+    background-image: url(../res/background.jpg);
     height: 1080px;
     width: 100vw;
 }

@@ -2,5 +2,6 @@
 
 .carousel{
     position: absolute;
-    width: 35vw;
+    height: 10vw;
+    width: 100vw;
 }

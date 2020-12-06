@@ -6,6 +6,7 @@
     "date": "09/10/2020",
     "product_type": "merchandise",
     "cost": 4000,
+    "customer_email": "tsalamanca@breakingbad.com",
     "customer_name": "Tuco Salamanca"
   },
   {
@@ -15,6 +16,7 @@
     "date": "08/10/2020",
     "product_type": "merchandise",
     "cost": 2000,
+    "customer_email": "agarcia@ufl.edu",
     "customer_name": "Abraham Garcia"
   },
   {
@@ -24,6 +26,7 @@
     "date": "10/10/2020",
     "product_type": "merchandise",
     "cost": 3000,
+    "customer_email": "wwhite@gmail.com",
     "customer_name": "Walter White"
   },
   {
@@ -33,6 +36,7 @@
     "date": "09/10/2020",
     "product_type": "merchandise",
     "cost": 4000,
+    "customer_email": "tsalamanca@ufl.edu",
     "customer_name": "Tuco Salamanca"
   },
   {
@@ -42,7 +46,8 @@
     "date": "08/10/2020",
     "product_type": "merchandise",
     "cost": 2000,
-    "customer_name": "Abraham Garcia"
+    "customer_email": "agarcia@ufl.edu",
+    "customer_name": "Abraham Garica"
   },
   {
     "order_number": 2123,
@@ -51,6 +56,7 @@
     "date": "10/10/2020",
     "product_type": "merchandise",
     "cost": 3000,
-    "customer_name": "Walter White"
+    "customer_email": "walterw@ufl.edu",
+    "customer_name": "Gus Fring"
   }
 ]

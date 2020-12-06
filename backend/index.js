@@ -4,9 +4,12 @@ import config from "./config.js";
 import bodyParser from "body-parser";
 import orderRouter from "./routes/orderRouter.js";
 import connectToDatabase from "./connectMongodb.js";
+import cors from "cors";
 
 //make the express app
 const app = express();
+
+app.use(cors());
 
 //body parsing middleware
 app.use(
@@ -32,7 +35,9 @@ db.on("error", (error) => {
 db.once("open", () => {
   console.log("Connected to MongoDB Atlas");
 
-  app.listen(config.port, () => {
+  const PORT = config.port || process.env.PORT;
+
+  app.listen(PORT, () => {
     console.log(`express app is now listening on port ${config.port}`);
   });
 });
