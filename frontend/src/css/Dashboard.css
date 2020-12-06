@@ -69,3 +69,10 @@
   right: 100%;
   text-align: center;
 }
+.Sign-out-button {
+  position: absolute;
+  border: none;
+  right: 10%;
+  top: 25%;
+  text-align: center;
+}

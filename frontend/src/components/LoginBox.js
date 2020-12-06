@@ -32,10 +32,12 @@ callbacks: {
 }
 };
 
+
+
 // for styling the username and password boxes
 const layout = {
     labelCol: {
-      span: 8,
+      span: 10,
     },
     wrapperCol: {
       span: 16,
@@ -76,8 +78,9 @@ const LoginBox = (props) => {
       };
       
     return(
+
         <div className='Login-box'>
-            <div class='column' style={{width: "50%", margin:"auto", marginTop:"5%"}}>
+            <div class='column' style={{position:"absolute" , top: "15%" , left: "15%"}}>
                 <Form
                     {...layout}
                     name="basic"
@@ -97,6 +100,7 @@ const LoginBox = (props) => {
                         },
                         ]}
                     >
+
                         <Input />
                     </Form.Item>
 
@@ -128,6 +132,7 @@ const LoginBox = (props) => {
                 <StyledFirebaseAuth  className ="googlebutton" 
                     uiConfig={uiConfig} 
                     firebaseAuth={auth}
+                    
                 />
                 </div>
 
