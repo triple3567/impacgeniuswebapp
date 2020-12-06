@@ -15,7 +15,7 @@ const SignOutButton = (props) => {
 
     return (
         <div className='SignOutButton'> 
-            <Button onClick = {onSignOut}> Sign Out </Button>
+            <Button type="primary" onClick = {onSignOut}> Sign Out </Button>
         </div>
     )
 

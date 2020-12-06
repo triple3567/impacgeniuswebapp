@@ -6,7 +6,6 @@ import StatisticsCarousel from "../components/StatisticsCarousel.js";
 import ProductChart from "../components/ProductSales";
 import VendorChart from "../components/VendorSales";
 import SignOutButton from '../components/SignOutButton'
-const { Header, Content, Footer } = Layout;
 
 function Dashboard() {
   return (
