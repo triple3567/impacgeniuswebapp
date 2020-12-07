@@ -1,37 +1,16 @@
-import React from "react"
+import React , {useState} from "react"
 import '../css/Login.css'
 import { Form, Input, Button, Checkbox } from 'antd'
-import { Redirect} from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
 import { useAuthState } from 'react-firebase-hooks/auth'
-import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
+import firebaseConfig from '../firebaseConfig.js'
+import SignInError from "../components/SignInError"
 
-var firebaseConfig = {
-  apiKey: "AIzaSyCCJf2xvI5J6gVeET30oRD7ZG8yGhMGib4",
-  authDomain: "igproject-5c36c.firebaseapp.com",
-  databaseURL: "https://igproject-5c36c.firebaseio.com",
-  projectId: "igproject-5c36c",
-  storageBucket: "igproject-5c36c.appspot.com",
-  messagingSenderId: "529386033730",
-  appId: "1:529386033730:web:2093e22cb8d0b66c6993db",
-  measurementId: "G-PYTZYX6Z2F"
-};
 
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
-const firestore = firebase.firestore();
-const uiConfig = {
-signInFlow: "popup",
-signInOptions: [
-  firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-],
-callbacks: {
-    signInSuccessWithAuthResult: () => false
-}
-};
-
 
 
 // for styling the username and password boxes
@@ -54,21 +33,30 @@ const layout = {
 
 const LoginBox = (props) => {
     const [user] = useAuthState(auth);
+    const [showError , setShowError] = useState(false);
     console.log( 'User Status: ' + user);
     const onFinish = (values) => {
         console.log('Success:', values);
         console.log(values.username);
-        firebase.auth().createUserWithEmailAndPassword(values.username, values.password).catch(function(error) {
+        firebase.auth().signInWithEmailAndPassword(values.username, values.password).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
           console.log(errorCode);
           console.log(errorMessage);
+
+          if (errorCode == "auth/user-not-found"){
+            console.log("The credentials you entered are invalid! Try again.");
+            setShowError(true);
+          }
+
+
           // ...
         });
-        console.log('email sign in ok');
        
         if(user != null){
+          // if user successfully signs in , set the show error hook to false
+          setShowError(false);
            window.location.href = "http://localhost:3000/dashboard"    
           }
       };
@@ -79,6 +67,7 @@ const LoginBox = (props) => {
       
     return(
 
+      
         <div className='Login-box'>
             <div class='column' style={{position:"absolute" , top: "15%" , left: "15%"}}>
                 <Form
@@ -123,18 +112,14 @@ const LoginBox = (props) => {
 
                     <Form.Item {...tailLayout}>
                         <Button type="primary" htmlType="submit" > 
-                        Submit
+                        Sign In
                         </Button >
                     </Form.Item>
                 </Form>
-
-                <div style={{paddingTop: "5%"}} class='row' className="Center-text">
-                <StyledFirebaseAuth  className ="googlebutton" 
-                    uiConfig={uiConfig} 
-                    firebaseAuth={auth}
-                    
-                />
-                </div>
+                
+                {/* use the showError Hook to determine if to display the sign in error component */}
+                {showError && <SignInError/>}
+                      
 
             </div>
         </div>

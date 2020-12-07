@@ -11,7 +11,7 @@ function Login(){
                 <img src={Logo} width="75%"/>
             </header>    
             <LoginBox/>
-            {/* <LoginMessage/> */}
+            <LoginMessage/>
         </div>
     )
 }

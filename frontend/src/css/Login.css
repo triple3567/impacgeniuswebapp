@@ -38,13 +38,25 @@
     background-color: #bac9f0;
     border-radius: 15px; 
     top: 15%;
-    right: 15%;
+    right: 10%;
     width: fit-content;
-    bottom: 40%;
+    bottom: auto;
     border: medium solid rgb(36, 35, 35);
     justify-items: center;
     text-align: left;
     font-size: 2em;
+}
+
+.Error-Message {
+    position: absolute;
+    top: 90%;
+    left: 15%;
+    right: 55%;
+    bottom: 40%;
+    width: fit-content;
+    color: red;
+    
+
 }
 
 .Center-text{
