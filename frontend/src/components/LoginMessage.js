@@ -1,15 +1,19 @@
 import React from "react"
-import '../css/Login.css'
 
 const LoginMessage = (props) => {
 
     return(
 
         <div className='Login-Message'>
-            <div class='column' style={{position:"absolute" , top: "15%" }}>
-                <text> hello worlds</text>
-                
-            </div>
+            <text> 
+                Welcome to your Imprint Genius Store Dashboard! 
+                <br/> 
+                Here you can find information about orders from all 
+                <br/>
+                your stores in one concise place! 
+                <br/>
+                Please input your credentials to the left. 
+            </text>
 
         </div>
     )
