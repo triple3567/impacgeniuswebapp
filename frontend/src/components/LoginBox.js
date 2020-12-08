@@ -35,17 +35,23 @@ const LoginBox = (props) => {
     const [user] = useAuthState(auth);
     const [showError , setShowError] = useState(false);
     console.log( 'User Status: ' + user);
+    if(user != null){
+      // if user successfully signs in , set the show error hook to false
+      setShowError(false);
+       window.location.href = "http://localhost:3000/dashboard"    
+      }
     const onFinish = (values) => {
         console.log('Success:', values);
         console.log(values.username);
-        firebase.auth().signInWithEmailAndPassword(values.username, values.password).catch(function(error) {
+        firebase.auth().signInWithEmailAndPassword(values.username, values.password)
+        .catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
           console.log(errorCode);
           console.log(errorMessage);
 
-          if (errorCode == "auth/user-not-found" || errorCode == "auth/invalid-email"){
+          if (errorCode == "auth/user-not-found" || errorCode == "auth/wrong-password"){
             console.log("The credentials you entered are invalid! Try again.");
             setShowError(true);
           }
@@ -53,12 +59,6 @@ const LoginBox = (props) => {
 
           // ...
         });
-       
-        if(user != null){
-          // if user successfully signs in , set the show error hook to false
-          setShowError(false);
-           window.location.href = "http://localhost:3000/dashboard"    
-          }
       };
     
       const onFinishFailed = (errorInfo) => {
