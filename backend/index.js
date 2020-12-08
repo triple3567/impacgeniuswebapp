@@ -40,7 +40,7 @@ db.once("open", () => {
 
     //index.html for the page routs
     app.get("*", (req, res) => {
-      res.sendFile("./frontend/build/index.html");
+      res.sendFile("/app/frontend/build/index.html");
     });
   }
 
