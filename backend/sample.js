@@ -1,7 +1,9 @@
 //this file will load in the sample orders from the sample.json file
 import fs from "fs";
-let samples = fs.readFileSync("./samples.json");
-let shopify_data = fs.readFileSync("./IG_Shopify_Sample_Data.json");
+import path from "path";
+
+let samples = fs.readFileSync("./backend/samples.json");
+let shopify_data = fs.readFileSync("./backend/IG_Shopify_Sample_Data.json");
 samples = JSON.parse(samples);
 shopify_data = JSON.parse(shopify_data);
 //
