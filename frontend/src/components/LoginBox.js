@@ -34,7 +34,7 @@ const LoginBox = (props) => {
   if (user != null) {
     // if user successfully signs in , set the show error hook to false
     setShowError(false);
-    window.location.href = "/dashboard";
+    window.location.href = window.location.href + "/dashboard";
   }
   const onFinish = (values) => {
     console.log("Success:", values);
