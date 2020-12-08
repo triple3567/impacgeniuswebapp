@@ -1,0 +1,15 @@
+{
+  "name": "imprintgenius-webapp",
+  "version": "1.0.0",
+  "description": "client facing dashboard for oder information",
+  "main": "index.js",
+  "engines": {
+    "node": "15.3.0",
+    "npm": "6.9.0"
+  },
+  "scripts": {
+    "start": "node backend/index.js",
+    "backend": "nodemon server/index.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  }
+}

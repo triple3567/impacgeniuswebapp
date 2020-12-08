@@ -1,6 +1,5 @@
 "use-stict";
 import express from "express";
-import config from "./config.js";
 import bodyParser from "body-parser";
 import orderRouter from "./routes/orderRouter.js";
 import connectToDatabase from "./connectMongodb.js";
@@ -35,9 +34,21 @@ db.on("error", (error) => {
 db.once("open", () => {
   console.log("Connected to MongoDB Atlas");
 
-  const PORT = config.port || process.env.PORT;
+  //serve static assets if in production
+  if (process.env.NODE_ENV === "production") {
+    app.use(express.static("frontend/build"));
+
+    //index.html for the page routs
+    app.get("*", (req, res) => {
+      res.sendFile(
+        path.resolve(__dirname, "../frontend", "build", "index.html")
+      );
+    });
+  }
+
+  const PORT = process.env.PORT || 5000;
 
   app.listen(PORT, () => {
-    console.log(`express app is now listening on port ${config.port}`);
+    console.log(`express app is now listening on port ${PORT}`);
   });
 });
