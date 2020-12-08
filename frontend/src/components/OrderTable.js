@@ -62,7 +62,7 @@ const OrderTable = (props) => {
     useEffect(() => {
         const fetchData = async () => {
             const result = await axios(
-                'http://localhost:5000/api'
+                'https://imprintgenius-webapp.herokuapp.com/api'
             );
     
             setRealDataSource(result.data);

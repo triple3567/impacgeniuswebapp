@@ -20,15 +20,15 @@ const StatisticsCarousel = (props) => {
     useEffect(() => {
         const fetchData = async () => {
             const avg = await axios(
-                'http://localhost:5000/api/average/'
+                'https://imprintgenius-webapp.herokuapp.com/api/average/'
             );
 
             const total = await axios(
-                'http://localhost:5000/api/total/'
+                'https://imprintgenius-webapp.herokuapp.com/api/total/'
             );
 
             const numSales = await axios(
-                'http://localhost:5000/api/numSales/'
+                'https://imprintgenius-webapp.herokuapp.com/api/numSales/'
             );
     
             set_avg_order(avg.data);
