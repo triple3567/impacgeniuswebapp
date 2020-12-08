@@ -45,7 +45,7 @@ const LoginBox = (props) => {
           console.log(errorCode);
           console.log(errorMessage);
 
-          if (errorCode == "auth/user-not-found"){
+          if (errorCode == "auth/user-not-found" || errorCode == "auth/invalid-email"){
             console.log("The credentials you entered are invalid! Try again.");
             setShowError(true);
           }
