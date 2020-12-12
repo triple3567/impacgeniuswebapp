@@ -2,7 +2,7 @@
 
 ![Alt Text](./dashboard.png)
 
-### A client dashboard web app for Impact Genius' customers
+### A client dashboard web app for Imprint Genius' customers
 ![line](https://github.com/triple3567/impactgeniuswebapp/blob/master/line.gif)
 
 This project has been deployed to:
